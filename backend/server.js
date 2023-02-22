@@ -6,6 +6,10 @@ const port = process.env.PORT || 5000
 //create server and app
 const app = express()
 
+// express.json and urlencoded to send data
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
+
 
 app.listen(port, () =>console.log(`server started on port ${port}`))
 
